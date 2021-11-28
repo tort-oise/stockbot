@@ -1,13 +1,17 @@
+// required components
 const fs = require('fs');
 const { Client, Collection, Intents } = require('discord.js');
 const { token } = require('./config.json');
 
+// makes a new client
 const client = new Client({ intents: [Intents.FLAGS.GUILDS] });
 
+// grabs command files with correct extensions
 client.commands = new Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const eventFiles = fs.readdirSync('./events').filter(file => file.endsWith('.js'));
 
+// not sure what it does but it's needed
 for (const file of commandFiles) {
 	const command = require(`./commands/${file}`);
 	// Set a new item in the Collection
@@ -15,6 +19,7 @@ for (const file of commandFiles) {
 	client.commands.set(command.data.name, command);
 }
 
+// checks for command execution
 for (const file of eventFiles) {
 	const event = require(`./events/${file}`);
 	if (event.once) {
@@ -24,6 +29,7 @@ for (const file of eventFiles) {
 	}
 }
 
+// sends a reply to the slash message
 client.on('interactionCreate', async interaction => {
 	if (!interaction.isCommand()) return;
 
@@ -39,4 +45,5 @@ client.on('interactionCreate', async interaction => {
 	}
 });
 
+// logs in with the token configured in config.json
 client.login(token);

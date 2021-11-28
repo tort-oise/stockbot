@@ -1,3 +1,4 @@
+// example command which just replies with "pong".
 const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
