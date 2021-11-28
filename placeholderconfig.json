@@ -1,0 +1,8 @@
+{
+        // client id of your bot
+	"clientId": "1234567898765432",
+        // guild id of the server that you want to add slash commands to
+	"guildId": "586704051148816385",
+        // your bot's token. do not share this with ANYONE.
+	"token": "YOUR-TOKEN-HERE"
+}
