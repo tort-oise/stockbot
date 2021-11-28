@@ -1,4 +1,4 @@
-// actual stock command. uses static text for now, but i'm planning on using a webscraper soon.
+// actual stock command. it just uses plain text right now, so this file basically acts as a placeholder.
 const { SlashCommandBuilder } = require('@discordjs/builders');
 const fs = require('fs')
 
@@ -7,6 +7,6 @@ module.exports = {
 		.setName('stock')
 		.setDescription('Sends the current stock.'),
 	async execute(interaction) {
-		await interaction.reply('Current stock: Chop, Smoke, Diamond, Light, **Venom**');
+		await interaction.reply('*Current stock*: Chop, Smoke, Falcon, Ice, **Phoenix**, **Paw**');
 	},
 };
