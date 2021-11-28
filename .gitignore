@@ -102,3 +102,13 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Added by user
+.eslintrc.json
+config.json
+package-lock.json
+.vs/VSWorkspaceState.json
+package.json
+.vs/ProjectSettings.json
+.vs/slnx.sqlite
+.vs/StockBot/v17/.suo
