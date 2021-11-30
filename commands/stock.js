@@ -7,6 +7,6 @@ module.exports = {
 		.setName('stock')
 		.setDescription('Sends the current stock.'),
 	async execute(interaction) {
-		await interaction.reply('*Current stock*: Chop, Smoke, Falcon, Ice, **Phoenix**, **Paw**');
+		await interaction.reply(fs.readFileSync("stock.txt", "utf8"));
 	},
 };
