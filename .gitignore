@@ -112,3 +112,4 @@ package.json
 .vs/ProjectSettings.json
 .vs/slnx.sqlite
 .vs/StockBot/v17/.suo
+stock.txt
