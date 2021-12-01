@@ -113,3 +113,4 @@ package.json
 .vs/slnx.sqlite
 .vs/StockBot/v17/.suo
 stock.txt
+.vs/StockBot/project-colors.json
